@@ -1,10 +1,15 @@
 ## Introduction
 
-This assignment uses data from
+This is my fork of the assigment for coursera week1 of 
+Exploratory Data Analysis.
+It is a fork of a source from the following GitHub repository:
+[https://github.com/rdpeng/ExData_Plotting1](https://github.com/rdpeng/ExData_Plotting1)
+
+We use data from
 the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
 Learning Repository</a>, a popular repository for machine learning
 datasets. In particular, we will be using the "Individual household
-electric power consumption Data Set" which I have made available on
+electric power consumption Data Set" which the instructor has made available on
 the course web site:
 
 
