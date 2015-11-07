@@ -15,7 +15,7 @@
 # store the grahics system parametes so we can reset them to defaults before we exit
 .pardefault <- par(no.readonly = T)
 household_power_consumption <- read.csv(pipe("egrep '^Date|^[1-2]/2/2007' household_power_consumption.txt"), 
-                                        row.names=NULL, sep=";", stringsAsFactors=FALSE)
+                                        row.names=NULL, sep=";", na.strings = "?", stringsAsFactors=FALSE)
 # convert Date and Time Columns into a new datetime column 
 household_power_consumption$DateTime <- strptime(paste(household_power_consumption$Date, 
                                                        household_power_consumption$Time), "%d/%m/%Y %H:%M:%S")

@@ -17,7 +17,7 @@
 
 # read the data file. The egrep pattern is used to filter header and all rows from the requested dates
 household_power_consumption <- read.csv(pipe("egrep '^Date|^[1-2]/2/2007' ./household_power_consumption.txt"), 
-                                        row.names=NULL, sep=";", stringsAsFactors=FALSE)
+                                        row.names=NULL, sep=";", na.strings = "?", stringsAsFactors=FALSE)
 
 # plot histogram
 hist(household_power_consumption$Global_active_power,col="red", main="Global Active Power", 
