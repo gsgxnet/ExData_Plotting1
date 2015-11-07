@@ -58,7 +58,7 @@ memory (most modern computers should be fine).
 rather than reading in the entire dataset and subsetting to those
 dates.
     + **I have done this by using egrep to filter the data file to header and relevant rows.** 
-    + **For details see the comments in the R scripts.  **  
+    + **For details see the comments in the R scripts.**  
       
 
 * You may find it useful to convert the Date and Time variables to
