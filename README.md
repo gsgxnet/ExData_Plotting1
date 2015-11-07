@@ -14,6 +14,8 @@ the course web site:
 
 
 * <b>Dataset</b>: <a href="https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip">Electric power consumption</a> [20Mb]
+    + **not included in this repo**
+    + **to run these scripts the reviewer has to copy the unzipped data file into the direcory where the repo is cloned to**   
 
 * <b>Description</b>: Measurements of electric power consumption in
 one household with a one-minute sampling rate over a period of almost
@@ -55,11 +57,9 @@ memory (most modern computers should be fine).
 2007-02-02. One alternative is to read the data from just those dates
 rather than reading in the entire dataset and subsetting to those
 dates.
-
-- this has been done by using egrep to filter the data file to
-header and relevant rows. For details see the comments in the
-R scripts
-
+    + **I have done this by using egrep to filter the data file to header and relevant rows.** 
+    + **For details see the comments in the R scripts.  **  
+      
 
 * You may find it useful to convert the Date and Time variables to
 Date/Time classes in R using the `strptime()` and `as.Date()`
