@@ -56,6 +56,11 @@ memory (most modern computers should be fine).
 rather than reading in the entire dataset and subsetting to those
 dates.
 
+- this has been done by using egrep to filter the data file to
+header and relevant rows. For details see the comments in the
+R scripts
+
+
 * You may find it useful to convert the Date and Time variables to
 Date/Time classes in R using the `strptime()` and `as.Date()`
 functions.
