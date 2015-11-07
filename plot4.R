@@ -32,7 +32,7 @@ with(household_power_consumption, {
   lines(DateTime, Sub_metering_1, lwd = 1)
   lines(DateTime, Sub_metering_2, lwd = 1, col = "red")
   lines(DateTime, Sub_metering_3, lwd = 1, col = "blue")
-  legend("topright", lty = 1, col = c("black", "red","blue"), 
+  legend("topright", lty = 1, bty = "n", col = c("black", "red","blue"), 
          legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
   #
   plot(DateTime, Voltage, type = "l", xlab = "datetime") 
@@ -45,3 +45,4 @@ dev.copy(png, file = "plot4.png")
 dev.off()
 
 par(.pardefault) # reset par to defaults
+
