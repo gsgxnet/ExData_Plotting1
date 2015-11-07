@@ -20,15 +20,18 @@ household_power_consumption <- read.csv(pipe("egrep '^Date|^[1-2]/2/2007' househ
 # convert Date and Time Columns into a new datetime column 
 household_power_consumption$DateTime <- strptime(paste(household_power_consumption$Date, 
                                                        household_power_consumption$Time), "%d/%m/%Y %H:%M:%S")
+
+png(filename="plot3.png") # plot must go immediately to the png device, devcopy destroys the legend
 plot(household_power_consumption$DateTime, household_power_consumption$Sub_metering_1, type="n", 
-     xlab="", ylab="Energy sub metering", cex=0.8)
+     xlab="", ylab="Energy sub metering")
 lines(household_power_consumption$DateTime, household_power_consumption$Sub_metering_1, lwd=1)
 lines(household_power_consumption$DateTime, household_power_consumption$Sub_metering_2, lwd=1, col="red")
 lines(household_power_consumption$DateTime, household_power_consumption$Sub_metering_3, lwd=1, col="blue")
 
-legend("topright", lty = 1, col = c("black", "red","blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+# screen legend okay, png bad?
+legend("topright", lty = 1, cex=0.7, col = c("black", "red","blue"), 
+       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
-dev.copy(png, file="plot3.png")
 dev.off()
 
-par(.pardefault) # reset par to defaults
+#par(.pardefault) # reset par to defaults

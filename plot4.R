@@ -23,6 +23,7 @@ household_power_consumption <-
 household_power_consumption$DateTime <-
   strptime(paste(household_power_consumption$Date, household_power_consumption$Time), "%d/%m/%Y %H:%M:%S")
 
+png(filename="plot4.png") # plot must go immediately to the png device, devcopy destroys the legend
 par(mfcol = c(2, 2), mar = c(4, 4, 2, 1), oma = c(0, 0, 2, 0), cex = 0.7)
 with(household_power_consumption, {
   # 
@@ -41,8 +42,7 @@ with(household_power_consumption, {
   #mtext("Overview", outer = TRUE)
 })
 
-dev.copy(png, file = "plot4.png")
 dev.off()
 
-par(.pardefault) # reset par to defaults
+#par(.pardefault) # reset par to defaults
 
